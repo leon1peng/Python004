@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <form action="/reg/" method="post">
+        {% csrf_token %}
+        <p>用户名:<input type="text" name="user" class="u_p" id="user"></p>
+        <p>密 码: <input type="password" name="pwd" class="u_p" id="passwd"></p>
+        <p><input type="submit" id="auth" value="提交"></p>
+    </form>
+
+
+</body>
+
+</html>

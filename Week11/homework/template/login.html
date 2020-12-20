@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/home.js"></script>
+</head>
+
+<body>
+    <div>
+        <form action="/login" method="post" novalidate>
+            {% csrf_token %}
+            <div>
+                <label for="">{{ login_form.user.label }}</label> {{ login_form.user }}
+                <span style="color: red">{{ login_form.errors.user.0 }}</span>
+            </div>
+            <div>
+                <label for=""> {{ login_form.pwd.label }}</label> {{ login_form.pwd }}
+                <span style="color: red">{{ login_form.errors.pwd.0 }}</span>
+            </div>
+            <input type="submit" value="提交">
+        </form>
+        <a href="/reg/">注册</a>
+    </div>
+</body>
+
+</html>

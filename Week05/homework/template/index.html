@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+
+<body>
+
+    <div class="center">
+        <h1> 哪吒之魔童降世 </h1>
+        <hr/>
+        {% for homework in homeworks %}
+        <div>
+            <p>星级: {{ homework.star }}</p>
+            <p>短评</p>
+            <span>{{ homework.comment }}</span>
+        </div>
+        <hr/>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
